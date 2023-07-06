@@ -155,22 +155,13 @@ console.log("besyuzdenkucuklersıralı: ", sirala(besyuzdenkucuksayilar));
 //3f çözümü
 tekraredensayilar = [];
 function tekrar(sayilarDizi) {
-  tekraredensayilar = sayilarDizi.reduce((deger, number) => {
+  tekraredensayilar = sayilarDizi.reduce(() => {
     for (let i = 0; i < sayilarDizi.length; i++) {
-      const sayi1 = number[i];
-      const sayi2 = number[i];
-      if (sayi1 === sayi2) {
-        if (deger[sayi1]) {
-          deger[sayi1] = deger[sayi1] + 1;
-        } else {
-          deger[sayi1] = 1;
-        }
-      }
+      const sayi = deger[i];
     }
-    return deger;
-  }, {});
-  return tekraredensayilar;
+  });
 }
+return tekraredensayilar;
 
 console.log("tekraredenler:", tekrar(sayilar));
 
