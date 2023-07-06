@@ -128,13 +128,22 @@ function arrayOlustur(sayilarDizi) {
 }
 console.log("ucebolunenler: ", arrayOlustur(sayilar));
 //3c çözümü:
+function toplam(ucetambolunenDizi) {
+  ucebolunenlerintoplami = ucetambolunenDizi.reduce((toplam, sayi) => {
+    return toplam + sayi;
+  }, 0);
+  return ucebolunenlerintoplami;
+}
 
-/* kodlar buraya */
-
+console.log("ucetambolunenlerintoplamı: ", toplam(ucetambolunenler));
 //3d çözümü
 
-/* kodlar buraya */
+function arrayOlustur2(sayilarDizi) {
+  besyuzdenkucuksayilar = sayilarDizi.filter((sayi) => sayi < 500);
+  return besyuzdenkucuksayilar;
+}
 
+console.log("besyuzdenkucukler: ", arrayOlustur2(sayilar));
 //3e çözümü
 
 /* kodlar buraya */
