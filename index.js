@@ -145,14 +145,35 @@ function arrayOlustur2(sayilarDizi) {
 
 console.log("besyuzdenkucukler: ", arrayOlustur2(sayilar));
 //3e çözümü
-
-/* kodlar buraya */
-
+function sirala(besyuzdenkucukler) {
+  besyuzdenkucukler.sort(function (a, b) {
+    return a - b;
+  });
+  return besyuzdenkucukler;
+}
+console.log("besyuzdenkucuklersıralı: ", sirala(besyuzdenkucuksayilar));
 //3f çözümü
+tekraredensayilar = [];
+function tekrar(sayilarDizi) {
+  tekraredensayilar = sayilarDizi.reduce((deger, number) => {
+    for (let i = 0; i < sayilarDizi.length; i++) {
+      const sayi1 = number[i];
+      const sayi2 = number[i];
+      if (sayi1 === sayi2) {
+        if (deger[sayi1]) {
+          deger[sayi1] = deger[sayi1] + 1;
+        } else {
+          deger[sayi1] = 1;
+        }
+      }
+    }
+    return deger;
+  }, {});
+  return tekraredensayilar;
+}
 
-/* kodlar buraya */
+console.log("tekraredenler:", tekrar(sayilar));
 
-/*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 function sa() {
   console.log("Kodlar çalışıyor");
   return "as";
